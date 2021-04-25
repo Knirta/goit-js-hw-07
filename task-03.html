@@ -13,10 +13,29 @@
         color: #424242;
         line-height: 1.5;
       }
+      #gallery {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -10px;
+        margin-left: -10px;
+      }
+      #gallery li {
+        margin-top: 10px;
+        margin-left: 10px;
+        flex-basis: calc(100% / 3 - 10px);
+      }
+      #gallery img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
     </style>
   </head>
   <body>
     <p><a href="index.html">На главную</a></p>
+    <ul id="gallery"></ul>
     <script src="js/task-03.js" type="module"></script>
   </body>
 </html>

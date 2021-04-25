@@ -9,6 +9,6 @@ function onInput(event) {
   if (inputValue === "") {
     outputRef.textContent = defaultOutput;
   } else {
-    outputRef.textContent = event.currentTarget.value;
+    outputRef.textContent = inputValue;
   }
 }

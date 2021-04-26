@@ -1,6 +1,6 @@
 const categoriesRef = document.querySelectorAll("li.item");
 console.log(`В списке ${categoriesRef.length} категории`);
-[...categoriesRef].map((categoryRef) => {
+[...categoriesRef].forEach((categoryRef) => {
   const categoryTitle = categoryRef.querySelector("h2").textContent;
   const categoryItemsRef = categoryRef.querySelectorAll("li");
   console.log(

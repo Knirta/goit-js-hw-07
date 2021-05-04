@@ -6,21 +6,18 @@ const refs = {
 };
 
 refs.renderBtn.addEventListener("click", onRenderBtnClick);
-refs.destroyBtn.addEventListener("click", onDestroyBtnClick);
+refs.destroyBtn.addEventListener("click", destroyBoxes);
 
-function onRenderBtnClick(e) {
+function onRenderBtnClick() {
   const boxesAmount = refs.input.value;
   createBoxes(boxesAmount);
-}
-
-function onDestroyBtnClick() {
-  destroyBoxes();
 }
 
 function createBoxes(amount) {
   const divsRef = [];
   const initialWidth = 30;
   const initialHeight = 30;
+  destroyBoxes();
   for (let i = 0; i < amount; i += 1) {
     const div = document.createElement("div");
     div.className = "inner-box";
